@@ -12,7 +12,7 @@
 	 { "id": 10, "title": "App Crashes! ", "type": "task", "column": "done"}
 	 ],
 	"comments": [
-	{"id": 1, "body": "some comment", "postId": 1}
+	{"id": 1, "body": "some comment", "postId": 1},
 	{"id": 1, "body": "some comment", "postId": 1}
 	],
 	"profile": {
