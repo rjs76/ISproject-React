@@ -20,11 +20,15 @@ handleResize = () => {//no arguments provided so that it wouldn't be a function 
   const adjustment = window.innerWidth;
   //in this instance limit will be largeComp only
   let limit = 'largeComp';
-
+  //running loops for specified screen sizes
+  
+  //first condition for samll screen
   if (screenWidth < largeComp && screenWidth >= smallComp){
     limit = 'smallComp';
+    //condition for tablet
   }else if (screenWidth < smallComp && screenWidth >= tablet){
     limit = 'tablet';
+    //condition for for
   }else if (screenWidth < tablet){
     limit = 'mobile';
   }
