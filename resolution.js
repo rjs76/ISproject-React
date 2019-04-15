@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const largeComp = 1366;
 const smallComp = 1024;
 const tablet = 768;
@@ -17,23 +18,19 @@ componentDidMount(){
 
 //setting screen resolutions to be displayed on respectable devices
 handleResize = () => {//no arguments provided so that it wouldn't be a function call
-  const adjustment = window.innerWidth;
-  //in this instance limit will be largeComp only
-  let limit = 'largeComp';
-  //running loops for specified screen sizes
-  
-  //first condition for samll screen
+  const screenWidth = window.innerWidth;
+  //in this instance adjustment will be largeComp only
+  let adjustment = 'largeComp';
+
   if (screenWidth < largeComp && screenWidth >= smallComp){
-    limit = 'smallComp';
-    //condition for tablet
+    adjustment = 'smallComp';
   }else if (screenWidth < smallComp && screenWidth >= tablet){
-    limit = 'tablet';
-    //condition for for
+    adjustment = 'tablet';
   }else if (screenWidth < tablet){
-    limit = 'mobile';
+    adjustment = 'mobile';
   }
 
-  this.setState(state{limit, screenWidth});
+  this.setState({adjustment, screenWidth});
   }
 }
 
